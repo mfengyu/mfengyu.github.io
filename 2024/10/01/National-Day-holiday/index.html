@@ -13,7 +13,7 @@
 
 
 
-<title>Hello World | Hexo</title>
+<title>National Day holiday | Hexo</title>
 
 
 
@@ -134,76 +134,11 @@
                 <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    var tocbot_timer;
-    var DEPTH_MAX = 6; // 为 6 时展开所有
-    var tocbot_default_config = {
-        tocSelector: '.tocbot-list',
-        contentSelector: '.post-content',
-        headingSelector: 'h1, h2, h3, h4, h5',
-        orderedList: false,
-        scrollSmooth: true,
-        onClick: extend_click,
-    };
-
-    function extend_click() {
-        clearTimeout(tocbot_timer);
-        tocbot_timer = setTimeout(function() {
-            tocbot.refresh(obj_merge(tocbot_default_config, {
-                hasInnerContainers: true
-            }));
-        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
-    }
-
-    document.ready(function() {
-        tocbot.init(obj_merge(tocbot_default_config, {
-            collapseDepth: 1
-        }));
-    });
-
-    function expand_toc() {
-        var b = document.querySelector('.tocbot-toc-expand');
-        var expanded = b.getAttribute('data-expanded');
-        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
-        tocbot.refresh(obj_merge(tocbot_default_config, {
-            collapseDepth: expanded ? 1 : DEPTH_MAX
-        }));
-        b.innerText = expanded ? 'Expand all' : 'Collapse all';
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-    function obj_merge(target, source) {
-        for (var item in source) {
-            if (source.hasOwnProperty(item)) {
-                target[item] = source[item];
-            }
-        }
-        return target;
-    }
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Hello World</h1>
+            <h1 class="post-title">National Day holiday</h1>
             
                 <div class="post-meta">
                     
@@ -212,28 +147,36 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">July 4, 2026&nbsp;&nbsp;22:18:07</a>
+                        Date: <a href="#">October 1, 2024&nbsp;&nbsp;20:36:31</a>
                         </span>
                     
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Misc/">Misc</a>
+                            
+                        </span>
                     
                 </div>
             
         </header>
 
         <div class="post-content">
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+            <p>It is the first day of National Day holiday in 2024. I made a regrettable decision: go out. I was planned to buy some new clothes for autumn and winter since the climate had dropped drastically after a heavy rain. Due to multiple times of unpleasant online shopping experiences, I decided to try those clothes on in a physical store.</p>
+<p>The crowd already made me feel dizzy when I exit the subway. To be honest, it’s been a long time since I’ve seen so many people crowded in the subway station. Last time I saw a resemble scenery was in 30 the April when I on my way home at the train station, I suddenly felt exhausted at the moment stepping into the railway station. I extremely dislike such environment which is too noisy and irritating.</p>
+<p align = "center">
+<img src="https://s2.loli.net/2024/10/01/gDZbYCABLt2uWJV.jpg" width="600" />
+<img src="https://s2.loli.net/2024/10/01/M9Fq7E1j2ADfuNS.jpg" width="600" />
+</p>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>Then I fleet the station as soon as possible and straightly walked to the store. It turned out to be another horrible place because the store is on sale, thus more people crowded into the store to search for items and try them on, leaving what was once neatly organized in complete disarray. So I left again, trying to escape the heat and noise brought by the crowds. Of course, I didn’t buy anything, not only because the crowd but also the price is still high after giving discount.</p>
+<p>The only place can bring me joy is the burger shop called “Egg Soul”. It was established in 2018 when I first came to Nanjing. I really love this burger shop and have came to this places many times that the money I spent here brought me a VIP discount. The vibe is the most iconic characteristics of itself. Colorful and dynamic graffiti on the wall, 90’s R&amp;B and Hip-Hop music together with aroma of food filling the space. The beef sandwich set is one of my favorites. Only a cup of diet coke, some French fries and a medium beef sandwich with green pepper, olive, beef and cheese. Terrible day, but thanks to Egg Soul I had a great supper.</p>
+<p align = "center">
+<img src="https://s2.loli.net/2024/10/01/z8YgJW3UMP7v4qN.jpg" width = 600/>
+</p>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>Next time I will stay in my dorm and go nowhere, I swear. </p>
 
         </div>
 
@@ -248,7 +191,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://mfengyu.github.io/2026/07/04/hello-world/">https://mfengyu.github.io/2026/07/04/hello-world/</a></span>
+                        <span><a href="https://mfengyu.github.io/2024/10/01/National-Day-holiday/">https://mfengyu.github.io/2024/10/01/National-Day-holiday/</a></span>
                     </p>
                 
                 
@@ -271,6 +214,10 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/Daily-Life/"># Daily Life</a>
+                    
+                        
                 </span>
             </div>
             <div>
@@ -281,8 +228,10 @@
         </section>
         <section class="post-nav">
             
+                <a class="prev" rel="prev" href="/2024/10/01/Mason-s-Radio-2/">Mason's Radio#2</a>
             
-            <a class="next" rel="next" href="/2026/07/04/%E6%8B%B3%E5%87%BB%E8%AE%AD%E7%BB%83/">拳击训练#1</a>
+            
+            <a class="next" rel="next" href="/2024/09/29/First-TOEFL-result/">First TOEFL result</a>
             
         </section>
 

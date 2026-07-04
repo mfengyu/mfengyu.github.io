@@ -13,7 +13,7 @@
 
 
 
-<title>Hello World | Hexo</title>
+<title>Reliability: An Overview | Hexo</title>
 
 
 
@@ -40,6 +40,45 @@
 
     
     
+        
+            <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
         
     
 
@@ -203,7 +242,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Hello World</h1>
+            <h1 class="post-title">Reliability: An Overview</h1>
             
                 <div class="post-meta">
                     
@@ -212,29 +251,38 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">July 4, 2026&nbsp;&nbsp;22:18:07</a>
+                        Date: <a href="#">November 28, 2024&nbsp;&nbsp;14:01:20</a>
                         </span>
                     
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Research/">Research</a>
+                            
+                        </span>
                     
                 </div>
             
         </header>
 
         <div class="post-content">
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+            <h1 id="Bayesian-inference"><a href="#Bayesian-inference" class="headerlink" title="Bayesian inference"></a>Bayesian inference</h1><p>先验概率：某个病人的患病概率是0.01</p>
+<p>检验准确性（条件概率）：检测在健康人群中有5%的假阳性率，在病人中有2%的假阴性率</p>
+<p>检测结果：我们得到一个阳性的检测结果</p>
+<p>我们希望计算病人实际患病的概率，即病人患病的后验概率。使用贝叶斯定理来计算：<br>$$<br>P(Disease|Positive)&#x3D;\frac {P(Positive|Disease)·P(Disease)}{P(Positive)}<br>$$</p>
+<h1 id="Monte-Carlo-simulation"><a href="#Monte-Carlo-simulation" class="headerlink" title="Monte Carlo simulation"></a>Monte Carlo simulation</h1><p>生成随机数带入函数，检查结果是否在约束条件内。随机数生成次数越多，模拟结果越精确</p>
+<h1 id="Renewal-process"><a href="#Renewal-process" class="headerlink" title="Renewal process"></a>Renewal process</h1><p>是一种特殊类型的随机过程，它描述了一系列事件（或“更新”）发生的时间间隔，其中每个事件的发生时间与之前的事件独立，并且每次事件发生后，系统都被重置回初始状态。它广泛应用于可靠性工程、排队理论、库存管理等领域。</p>
+<h2 id="更新过程的核心特征"><a href="#更新过程的核心特征" class="headerlink" title="更新过程的核心特征"></a>更新过程的核心特征</h2><ul>
+<li><strong>独立性</strong>：每次事件发生的时间间隔（即两个事件之间的时间）是独立的，且通常服从某种已知的概率分布。</li>
+<li><strong>重置</strong>：每次事件发生后，系统被重置为初始状态，这意味着过程的未来行为与过去无关。</li>
+<li><strong>非负时间间隔</strong>：事件之间的时间间隔总是非负的。</li>
+</ul>
+<h2 id="更新过程的常见类型"><a href="#更新过程的常见类型" class="headerlink" title="更新过程的常见类型"></a>更新过程的常见类型</h2><p><strong>泊松过程</strong>：如果事件发生的时间间隔服从泊松分布，则更新过程为泊松过程</p>
+<p><strong>非泊松过程</strong>： 时间间隔服从其他分布（正态分布、gamma分布等）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数设置</span></span><br><span class="line">lambda_fault = <span class="number">1</span> / <span class="number">10</span>  <span class="comment"># 故障间隔的平均时间（指数分布，平均每10小时发生一次故障）</span></span><br><span class="line">num_failures = <span class="number">10</span>  <span class="comment"># 模拟10次故障</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成故障间隔时间（指数分布）</span></span><br><span class="line">failures = np.random.exponential(scale=<span class="number">1</span>/lambda_fault, size=num_failures)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算故障发生的时间点</span></span><br><span class="line">failure_times = np.cumsum(failures)  <span class="comment"># 累加故障间隔，得到每次故障的发生时间</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制故障发生时间</span></span><br><span class="line">plt.figure(figsize=(<span class="number">8</span>, <span class="number">6</span>))</span><br><span class="line">plt.step(failure_times, np.arange(<span class="number">1</span>, num_failures + <span class="number">1</span>), where=<span class="string">&#x27;post&#x27;</span>, label=<span class="string">&quot;Failure Times&quot;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;Time&quot;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;Number of Failures&quot;</span>)</span><br><span class="line">plt.title(<span class="string">&quot;Renewal Process: Failure Times of a System&quot;</span>)</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+<h1 id="Bayesian-networks"><a href="#Bayesian-networks" class="headerlink" title="Bayesian networks"></a>Bayesian networks</h1><h1 id="Decision-analysis"><a href="#Decision-analysis" class="headerlink" title="Decision analysis"></a>Decision analysis</h1><h1 id="Machine-learning"><a href="#Machine-learning" class="headerlink" title="Machine learning"></a>Machine learning</h1><h1 id="Reliability-analysis"><a href="#Reliability-analysis" class="headerlink" title="Reliability analysis"></a>Reliability analysis</h1><h1 id="Risk-analysis"><a href="#Risk-analysis" class="headerlink" title="Risk analysis"></a>Risk analysis</h1><h1 id="Human-factors"><a href="#Human-factors" class="headerlink" title="Human factors"></a>Human factors</h1><h1 id="Global-sensitivity-analysis"><a href="#Global-sensitivity-analysis" class="headerlink" title="Global sensitivity analysis"></a>Global sensitivity analysis</h1>
         </div>
 
         
@@ -248,7 +296,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://mfengyu.github.io/2026/07/04/hello-world/">https://mfengyu.github.io/2026/07/04/hello-world/</a></span>
+                        <span><a href="https://mfengyu.github.io/2024/11/28/Reliability-An-Overview/">https://mfengyu.github.io/2024/11/28/Reliability-An-Overview/</a></span>
                     </p>
                 
                 
@@ -271,6 +319,10 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/Reliability-Engineering/"># Reliability Engineering</a>
+                    
+                        
                 </span>
             </div>
             <div>
@@ -281,8 +333,10 @@
         </section>
         <section class="post-nav">
             
+                <a class="prev" rel="prev" href="/2026/07/04/%E6%8B%B3%E5%87%BB%E8%AE%AD%E7%BB%83/">拳击训练#1</a>
             
-            <a class="next" rel="next" href="/2026/07/04/%E6%8B%B3%E5%87%BB%E8%AE%AD%E7%BB%83/">拳击训练#1</a>
+            
+            <a class="next" rel="next" href="/2024/10/22/Reinforcement-Learning-in-Reliability-Optimization/">Reinforcement Learning in Reliability Optimization</a>
             
         </section>
 
