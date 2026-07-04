@@ -83,7 +83,9 @@
     
 
 
-<meta name="generator" content="Hexo 8.1.2"></head>
+<meta name="generator" content="Hexo 8.1.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
 
 <body>
     <script>
@@ -193,7 +195,7 @@
 <h3 id="Perfect-Mixing-Assumption"><a href="#Perfect-Mixing-Assumption" class="headerlink" title="Perfect Mixing Assumption"></a>Perfect Mixing Assumption</h3><p>It is assumed that the reactor is perfectly mixed, meaning that at any point within the reactor, the properties such as concentration and temperature are the same as at the exit. This simplifies the design and analysis of the reactor.</p>
 <h3 id="Continuous-Input-and-Output"><a href="#Continuous-Input-and-Output" class="headerlink" title="Continuous Input and Output"></a><strong>Continuous Input and Output</strong></h3><p>Reactants are added and products are removed continuously, unlike in batch reactors, where materials are added at the beginning and products are taken out after the reaction is completed.</p>
 <h2 id="Steady-states"><a href="#Steady-states" class="headerlink" title="Steady states"></a>Steady states</h2><blockquote>
-<p><strong>R(T):</strong> Heat removal rate of cooling jacket<br>$$<br>R(T)&#x3D;C_P(1+k)(T-T_C)\tag{1}<br>$$<br><strong>G(T):</strong> Heat generation rate of reaction<br>$$<br>G(T)&#x3D;(-ΔH)(\frac{-r_AV}{F_{A0}})\tag{2}<br>$$</p>
+<p><strong>R(T):</strong> Heat removal rate of cooling jacket<br>$$<br>R(T)=C_P(1+k)(T-T_C)\tag{1}<br>$$<br><strong>G(T):</strong> Heat generation rate of reaction<br>$$<br>G(T)=(-ΔH)(\frac{-r_AV}{F_{A0}})\tag{2}<br>$$</p>
 </blockquote>
 <p>We are going to consider a CSTR which has a runaway reaction when it goes to the upper steady state which is at an unacceptably high temperature. This transition to the upper steady state will occur when the point of tangency between R(T) and G(T) disappears and only the upper steady state exists.</p>
 <p><img src="https://websites.umich.edu/~elements/08chap/html/runaway/pics/lec35a-03.gif" alt="img"></p>
@@ -238,13 +240,13 @@
 <h1 id="T-determination-procedure"><a href="#T-determination-procedure" class="headerlink" title="$T^*$ determination procedure"></a>$T^*$ determination procedure</h1><ol>
 <li><p>Specify $T_C$ and $τ$ </p>
 </li>
-<li><p>Use a non-linear equation to solve for $T^<em>$<br>$$<br>T^</em>&#x3D;T_C+\frac{R}{E}(1+τAe^{-\frac{R}{E}T^<em>}){T^</em>}^2\tag{3}<br>$$</p>
+<li><p>Use a non-linear equation to solve for $T^<em>$<br>$$<br>T^</em>=T_C+\frac{R}{E}(1+τAe^{-\frac{R}{E}T^<em>}){T^</em>}^2\tag{3}<br>$$</p>
 </li>
-<li><p>Calculate conversion rate $X$<br>$$<br>X&#x3D;\frac{kτ}{kτ+1} \tag{4}<br>$$</p>
+<li><p>Calculate conversion rate $X$<br>$$<br>X=\frac{kτ}{kτ+1} \tag{4}<br>$$</p>
 </li>
 <li><p>Calculate $G(T^*)$</p>
 </li>
-<li><p>Calculate $S^<em>$<br>$$<br>S^</em>&#x3D;\frac {EG(T^<em>)}{R(T^</em>)^2(1+τk^*)}\tag{5}<br>$$</p>
+<li><p>Calculate $S^<em>$<br>$$<br>S^</em>=\frac {EG(T^<em>)}{R(T^</em>)^2(1+τk^*)}\tag{5}<br>$$</p>
 </li>
 <li><p>Increment $T_C$ and carry out steps above to arrive at a figure as a function of  $T_C$</p>
 </li>
